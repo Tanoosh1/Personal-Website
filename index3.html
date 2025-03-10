@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Website</title>
+        <style>
+            h1, h2, h3 {
+                color: white;
+                text-align: center;
+                font-family: monospace;
+            }
+
+            h1 { font-size: 40px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 20px; }
+
+            body {
+                background-color: rgb(48, 47, 47);
+                margin: 0;
+                height: auto; /* Removes the fixed height */
+                min-height: 100vh; /* Ensures at least full viewport height */
+                overflow: auto; /* Enables scrolling */
+            }
+            
+
+            /* Diagonal lines */
+            .diagonal-line {
+                position: absolute;
+                width: 150px; /* Line length */
+                height: 4px; /* Line thickness */
+                background-color: white;
+            }
+
+            /* Top left diagonal lines (facing up) */
+            .diagonal-left-1 {
+                bottom: 540px;
+                width: 400px;
+                height: 1px;
+                left: -50px;
+                transform: rotate(-45deg);
+            }
+            .diagonal-left-2 {
+                bottom: 280px;
+                width: 400px;
+                height: 1px;
+                left: -50px;
+                transform: rotate(-45deg);
+            }
+
+            /* Bottom right diagonal lines (facing down) */
+            .diagonal-right-1 {
+                bottom: 540px;
+                width: 400px;
+                height: 1px;
+                right: -50px;
+                transform: rotate(-45deg);
+            }
+            .diagonal-right-2 {
+                
+                bottom: 280px;
+                width: 400px;
+                height: 1px;
+                right: -50px;
+                transform: rotate(-45deg);
+            }
+
+            /* Button styling */
+            .button-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            button {
+                background-color: white;
+                border: 2px solid black;
+                font-family: monospace;
+                height: 100px;
+                width: 900px;
+                transition: border-radius 0.3s ease-in-out;
+                border-radius: 10px;
+                font-size: 30px;
+            }
+
+            button:hover {
+                border-radius: 20px;
+            }
+
+            /* Resume text styling */
+            .resume-container {
+                width: 80%;
+                max-width: 900px; /* Prevents text from being too wide */
+                margin: 40px auto; /* Centers it on the page */
+                background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+                font-family: monospace;
+                line-height: 1.6; /* Improves readability */
+            }
+
+            .resume-container p {
+                white-space: pre-line; /* Keeps the structure */
+            }
+
+            .resume-container h2 {
+                text-align: left;
+                font-size: 24px;
+                border-bottom: 2px solid white; /* Section dividers */
+                padding-bottom: 5px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="index.html">
+            <img src="blank-home-button.svg" alt="Home" width="70" style="margin-top: 20px; cursor: pointer;">
+        </a>
+        <div class="diagonal-line diagonal-left-1"></div>
+        <div class="diagonal-line diagonal-left-2"></div>
+        <div class="diagonal-line diagonal-right-1"></div>
+        <div class="diagonal-line diagonal-right-2"></div>
+        <div class="resume-container">
+            <h1>Resume</h1>
+            <p><strong>Tanoosh Rayavaram</strong> <br>
+            📧 Tanoosh_rayavaram@berkeley.edu | 📍 Cream Ridge, NJ | 📞 (609) 738-7746</p>
+        
+            <h2>Education</h2>
+            <p><strong>University of California, Berkeley</strong> <br>
+            Bachelor of Arts, Analytics (Concentration: Algorithms & Machine Learning) <br>
+            Bachelor of Science, Statistics (Concentration: Data Science) <br>
+            Expected Graduation: May 2028</p>
+        
+            <p><strong>Relevant Coursework:</strong> <br>
+            CS 10 - The Beauty and Joy of Computing, Data 6 - Intro to Computational Thinking with Data, CS 88C - Structure & Interpretation of Computer Programs, Data 8 - Foundations of Data Science, CS 198 - Intro to Full-Stack Web Development, Econ 2 - Intro to Economics, Math 1A/1B - Calculus I & II</p>
+        
+            <h2>Work Experience and Leadership</h2>
+            <p><strong>Computer Science Intern</strong> <br>
+            Academic Intern, UC Berkeley EECS Dept | [Month Year – Present] <br>
+            - Led office hours, guided students through labs, and helped with CS coursework. <br>
+            - Assisted in grading assignments, quizzes, and exams. <br>
+            - Mentored students in problem-solving and debugging.</p>
+        
+            <p><strong>Tutor & Mentor</strong> <br>
+            Calculus, Computer Science, Statistics | [Month Year – Present] <br>
+            - Provided personalized tutoring, improving students’ test scores by over 10%. <br>
+            - Created customized learning plans to enhance comprehension.</p>
+        
+            <p><strong>IISE - UC Berkeley</strong> <br>
+            Member | [Month Year – Present] <br>
+            - Engaged in professional development and networking related to operations research & analytics. <br>
+            - Participated in case competitions & industry events.</p>
+        
+            <h2>Projects</h2>
+            <p><strong>CS88 Final Project:</strong> [Brief Description] <br>
+            <strong>Personal Website:</strong> <a href="#">[Link]</a> <br>
+            <strong>Data8 Final Project:</strong> [Brief Description] <br>
+            <strong>Full-Stack Final Project:</strong> [Brief Description]</p>
+        
+            <h2>Skills</h2>
+            <p><strong>Programming:</strong> Python, HTML, CSS, JavaScript, Full-Stack Development <br>
+            <strong>Data Science Tools:</strong> NumPy, Pandas <br>
+            <strong>Technical Skills:</strong> Algorithms, Data Visualization, Machine Learning Basics <br>
+            <strong>Interests:</strong> Music, Hiking, Reading, Animals, Volunteering, Outdoors, National Parks, Scuba Diving</p>
+        </div>
+        </div>
+    </body>
+</html>

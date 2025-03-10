@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Website</title>
+        <style>
+            h1, h2, h3 {
+                color: white;
+                text-align: center;
+                font-family: monospace;
+            }
+
+            h1 { font-size: 40px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 20px; }
+
+            body {
+                background-color: rgb(48, 47, 47);
+                position: relative;
+                height: 100vh;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            /* Diagonal lines */
+            .diagonal-line {
+                position: absolute;
+                width: 150px; /* Line length */
+                height: 4px; /* Line thickness */
+                background-color: white;
+            }
+
+            /* Top left diagonal lines (facing up) */
+            .diagonal-left-1 {
+                bottom: 540px;
+                width: 400px;
+                height: 1px;
+                left: -50px;
+                transform: rotate(-45deg);
+            }
+            .diagonal-left-2 {
+                bottom: 280px;
+                width: 400px;
+                height: 1px;
+                left: -50px;
+                transform: rotate(-45deg);
+            }
+
+            /* Bottom right diagonal lines (facing down) */
+            .diagonal-right-1 {
+                bottom: 540px;
+                width: 400px;
+                height: 1px;
+                right: -50px;
+                transform: rotate(-45deg);
+            }
+            .diagonal-right-2 {
+                
+                bottom: 280px;
+                width: 400px;
+                height: 1px;
+                right: -50px;
+                transform: rotate(-45deg);
+            }
+
+            /* Button styling */
+            .button-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            button {
+                background-color: white;
+                border: 2px solid black;
+                font-family: monospace;
+                height: 100px;
+                width: 900px;
+                transition: border-radius 0.3s ease-in-out;
+                border-radius: 10px;
+                font-size: 30px;
+            }
+
+            button:hover {
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="diagonal-line diagonal-left-1"></div>
+        <div class="diagonal-line diagonal-left-2"></div>
+        <div class="diagonal-line diagonal-right-1"></div>
+        <div class="diagonal-line diagonal-right-2"></div>
+
+        <h2>Welcome To My Website!</h2>
+        <h1>Tanoosh Rayavaram</h1>
+        <h3>Data Scientist | Web Developer | UC Berkeley Student</h3>
+
+        <div class="button-container">
+            <a href="index3.html"><button>See My Resume</button></a>
+            <a href="index4.html"><button>Contact Me</button></a>
+            <a href="index2.html"><button>See My Projects</button></a>
+        </div>
+    </body>
+</html>
