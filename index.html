@@ -14,22 +14,69 @@
             h3 { font-size: 20px; }
 
             body {
-                background-color: rgb(48, 47, 47);
-                position: relative;
+                background-image: url('back.jpg'); 
+                background-size: cover; 
+                background-position: center;
+                background-repeat: no-repeat; 
                 height: 100vh;
                 margin: 0;
                 overflow: hidden;
+
             }
+
+                        /* Navigation Bar */
+            .navbar {
+                display: flex;
+                justify-content: center; /* Center everything */
+                align-items: center;
+                padding: 15px 40px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                backdrop-filter: blur(10px);
+                background: rgba(0, 0, 0, 0.5); /* Adds slight background for readability */
+            }
+
+            .navbar-container {
+                display: flex;
+                justify-content: space-between;
+                width: 80%; /* Keeps navbar at a reasonable width */
+                max-width: 1200px;
+            }
+
+            .navbar-left,
+            .navbar-center,
+            .navbar-right
+            .navbar-index3 {
+                display: flex;
+                gap: 30px; /* Improves spacing between links */
+            }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                font-family: monospace;
+                font-size: 20px;
+                padding: 8px 16px;
+                border-bottom: 2px solid transparent;
+                transition: color 0.3s, border-bottom 0.3s;
+            }
+
+            .navbar a:hover {
+                color: #f0f0f0;
+                border-bottom: 2px solid white;
+            }
+
 
             /* Diagonal lines */
             .diagonal-line {
                 position: absolute;
-                width: 150px; /* Line length */
-                height: 4px; /* Line thickness */
+                width: 150px;
+                height: 4px;
                 background-color: white;
             }
 
-            /* Top left diagonal lines (facing up) */
             .diagonal-left-1 {
                 bottom: 540px;
                 width: 400px;
@@ -45,7 +92,6 @@
                 transform: rotate(-45deg);
             }
 
-            /* Bottom right diagonal lines (facing down) */
             .diagonal-right-1 {
                 bottom: 540px;
                 width: 400px;
@@ -54,7 +100,6 @@
                 transform: rotate(-45deg);
             }
             .diagonal-right-2 {
-                
                 bottom: 280px;
                 width: 400px;
                 height: 1px;
@@ -62,48 +107,45 @@
                 transform: rotate(-45deg);
             }
 
-            /* Button styling */
-            .button-container {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-
-            button {
-                background-color: white;
-                border: 2px solid black;
-                font-family: monospace;
-                height: 100px;
-                width: 900px;
-                transition: border-radius 0.3s ease-in-out;
-                border-radius: 10px;
-                font-size: 30px;
-            }
-
-            button:hover {
-                border-radius: 20px;
+            /* Centered Text */
+            .content {
+                margin-top: 100px;
+                text-align: center;
             }
         </style>
     </head>
     <body>
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-left">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navbar-center">
+                    <a href="index2.html">Projects</a>
+                </div>
+                <div class="navbar-right">
+                    <a href="index3.html">Resume</a>
+                </div>
+                <div class="navbar-index3">
+                    <a href="index4.html">Contact Me</a>
+                </div>
+            </div>
+        </div>
+
         <div class="diagonal-line diagonal-left-1"></div>
         <div class="diagonal-line diagonal-left-2"></div>
         <div class="diagonal-line diagonal-right-1"></div>
         <div class="diagonal-line diagonal-right-2"></div>
 
-        <h2>Welcome To My Website!</h2>
-        <h1>Tanoosh Rayavaram</h1>
-        <h3>Data Scientist | Web Developer | UC Berkeley Student</h3>
-
-        <div class="button-container">
-            <a href="index3.html"><button>See My Resume</button></a>
-            <a href="index4.html"><button>Contact Me</button></a>
-            <a href="index2.html"><button>See My Projects</button></a>
+        <div class="content">
+            <h2>Welcome To My Website!</h2>
+            <h1>Tanoosh Rayavaram</h1>
+            <h3>Data Scientist | Web Developer | UC Berkeley Student</h3>
+            <p style="color: white; font-family: monospace; font-size: 40px; width: 60%; margin: 0 auto;">
+                Hi, I'm Tanoosh Rayavaram, a student at UC Berkeley pursuing degrees in Analytics and Statistics 
+                with a focus on Machine Learning and Data Science. I'm passionate about computer science, 
+                full-stack development, and data-driven problem-solving.
+            </p>
         </div>
     </body>
 </html>

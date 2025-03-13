@@ -9,9 +9,11 @@
                 font-family: monospace;
             }
 
-            h1 { font-size: 40px; }
+            h1 { font-size: 40px; margin-top: 80px; }
             h2 { font-size: 30px; }
             h3 { font-size: 20px; }
+
+
 
             body {
                 background-color: rgb(48, 47, 47);
@@ -21,11 +23,55 @@
                 overflow: hidden;
             }
 
+            /* Navigation Bar */
+            .navbar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 40px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                backdrop-filter: blur(10px);
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .navbar-container {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                max-width: 1200px;
+            }
+
+            .navbar-left,
+            .navbar-center,
+            .navbar-right,
+            .navbar-index3 {
+                display: flex;
+                gap: 30px;
+            }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                font-family: monospace;
+                font-size: 20px;
+                padding: 8px 16px;
+                border-bottom: 2px solid transparent;
+                transition: color 0.3s, border-bottom 0.3s;
+            }
+
+            .navbar a:hover {
+                color: #f0f0f0;
+                border-bottom: 2px solid white;
+            }
+
             /* Diagonal lines */
             .diagonal-line {
                 position: absolute;
-                width: 150px; /* Line length */
-                height: 4px; /* Line thickness */
+                width: 150px;
+                height: 4px;
                 background-color: white;
             }
 
@@ -54,7 +100,6 @@
                 transform: rotate(-45deg);
             }
             .diagonal-right-2 {
-                
                 bottom: 280px;
                 width: 400px;
                 height: 1px;
@@ -91,21 +136,36 @@
         </style>
     </head>
     <body>
-        <a href="index.html">
-            <img src="blank-home-button.svg" alt="Home" width="70" style="margin-top: 20px; cursor: pointer;">
-        </a>
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-left">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navbar-center">
+                    <a href="index2.html">Projects</a>
+                </div>
+                <div class="navbar-right">
+                    <a href="index3.html">Resume</a>
+                </div>
+                <div class="navbar-index3">
+                    <a href="index4.html">Contact Me</a>
+                </div>
+            </div>
+        </div>
+
+        
         <div class="diagonal-line diagonal-left-1"></div>
         <div class="diagonal-line diagonal-left-2"></div>
         <div class="diagonal-line diagonal-right-1"></div>
         <div class="diagonal-line diagonal-right-2"></div>
 
-        
         <h1>Contact Me!</h1>
 
         <div class="button-container">
             <button>Email: Tanooshr@gmail.com</button>
             <button>LinkedIn: Tanooshr</button>
-            <button>Phone Number:609-738-7746</button>
+            <button>Phone Number: 609-738-7746</button>
         </div>
     </body>
 </html>

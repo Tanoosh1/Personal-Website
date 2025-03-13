@@ -16,17 +16,60 @@
             body {
                 background-color: rgb(48, 47, 47);
                 margin: 0;
-                height: auto; /* Removes the fixed height */
-                min-height: 100vh; /* Ensures at least full viewport height */
-                overflow: auto; /* Enables scrolling */
+                height: auto;
+                min-height: 100vh;
+                overflow: auto;
             }
-            
+
+            /* Navigation Bar */
+            .navbar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 40px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                backdrop-filter: blur(10px);
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .navbar-container {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                max-width: 1200px;
+            }
+
+            .navbar-left,
+            .navbar-center,
+            .navbar-right,
+            .navbar-index3 {
+                display: flex;
+                gap: 30px;
+            }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                font-family: monospace;
+                font-size: 20px;
+                padding: 8px 16px;
+                border-bottom: 2px solid transparent;
+                transition: color 0.3s, border-bottom 0.3s;
+            }
+
+            .navbar a:hover {
+                color: #f0f0f0;
+                border-bottom: 2px solid white;
+            }
 
             /* Diagonal lines */
             .diagonal-line {
                 position: absolute;
-                width: 150px; /* Line length */
-                height: 4px; /* Line thickness */
+                width: 150px;
+                height: 4px;
                 background-color: white;
             }
 
@@ -55,7 +98,6 @@
                 transform: rotate(-45deg);
             }
             .diagonal-right-2 {
-                
                 bottom: 280px;
                 width: 400px;
                 height: 1px;
@@ -93,33 +135,49 @@
             /* Resume text styling */
             .resume-container {
                 width: 80%;
-                max-width: 900px; /* Prevents text from being too wide */
-                margin: 40px auto; /* Centers it on the page */
-                background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+                max-width: 900px;
+                margin: 40px auto;
+                background: rgba(255, 255, 255, 0.1);
                 padding: 20px;
                 border-radius: 10px;
                 color: white;
                 font-family: monospace;
-                line-height: 1.6; /* Improves readability */
+                line-height: 1.6;
             }
 
             .resume-container p {
-                white-space: pre-line; /* Keeps the structure */
+                white-space: pre-line;
             }
 
             .resume-container h2 {
                 text-align: left;
                 font-size: 24px;
-                border-bottom: 2px solid white; /* Section dividers */
+                border-bottom: 2px solid white;
                 padding-bottom: 5px;
                 margin-top: 20px;
             }
         </style>
     </head>
     <body>
-        <a href="index.html">
-            <img src="blank-home-button.svg" alt="Home" width="70" style="margin-top: 20px; cursor: pointer;">
-        </a>
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-left">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navbar-center">
+                    <a href="index2.html">Projects</a>
+                </div>
+                <div class="navbar-right">
+                    <a href="index3.html">Resume</a>
+                </div>
+                <div class="navbar-index3">
+                    <a href="index4.html">Contact Me</a>
+                </div>
+            </div>
+        </div>
+
+        
         <div class="diagonal-line diagonal-left-1"></div>
         <div class="diagonal-line diagonal-left-2"></div>
         <div class="diagonal-line diagonal-right-1"></div>
@@ -166,7 +224,6 @@
             <strong>Data Science Tools:</strong> NumPy, Pandas <br>
             <strong>Technical Skills:</strong> Algorithms, Data Visualization, Machine Learning Basics <br>
             <strong>Interests:</strong> Music, Hiking, Reading, Animals, Volunteering, Outdoors, National Parks, Scuba Diving</p>
-        </div>
         </div>
     </body>
 </html>
